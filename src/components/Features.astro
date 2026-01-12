@@ -1,0 +1,103 @@
+---
+import { Image } from "astro:assets";
+import photo1 from "../assets/photo_1.png";
+import photo2 from "../assets/photo_2.png";
+import photo3 from "../assets/photo_3.png";
+---
+
+<div id="container">
+  <section id="hero">
+    <h1>Quality feedbacks for your SaaS products</h1>
+    <p>The blocks & components you need</p>
+  </section>
+  <section id="content">
+    <div class="card">
+      <div class="deco one">✋</div>
+      <h2>Collect Feedback at Multiple Touchpoints</h2>
+      <p>Provide a comprehensive understanding of the customer experience.</p>
+      <Image src={photo2} alt="Photo 1" />
+    </div>
+    <div class="card">
+      <div class="deco two">🥅</div>
+      <h2>Ask Targeted and Specific Questions</h2>
+      <p>
+        Avoid vague or open-ended questions that may not yield actionable
+        insights.
+      </p>
+      <Image src={photo1} alt="Photo 2" />
+    </div>
+    <div class="card">
+      <div class="deco three">💬</div>
+      <h2>Prioritize and Respond to Feedback</h2>
+      <p>
+        Communicate the changes or improvements you've made in response to their
+        feedback.
+      </p>
+      <Image src={photo3} alt="Photo 3" />
+    </div>
+  </section>
+</div>
+
+<style>
+  #container {
+    gap: 3em;
+    display: flex;
+    margin-inline: 8em;
+    flex-direction: column;
+  }
+  #hero {
+    display: flex;
+    margin: 0 auto;
+    max-width: 27em;
+    text-align: center;
+    flex-direction: column;
+  }
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #content {
+    /* gap: 2em; */
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+  .card {
+    padding: 2em;
+    max-width: 16em;
+    border: transparent;
+    border-radius: 16px;
+    background-color: #212936;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+
+    > img {
+      border: transparent;
+      border-radius: 12px;
+    }
+    > .deco {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      text-align: center;
+      border: transparent;
+      border-radius: 100px;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+    .deco.one {
+    background-color: #fceed8;
+    }
+    .deco.two {
+      background-color: #dee9fc;
+    }
+    .deco.three {
+      background-color: #FBE5E6;
+    }
+</style>

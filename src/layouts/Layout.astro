@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Simple Feature Section | devChallenges.io</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+  <footer>
+    <div class="author-info">
+      Coded by <a href="#">Your Name Here</a> | Challenge by
+      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
+        >devChallenges.io</a
+      >.
+    </div>
+  </footer>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "Outfit";
+    font-style: normal;
+    font-display: swap;
+    src: url(/Outfit-VariableFont_wght.ttf) format("truetype");
+  }
+
+  html,
+  body {
+    margin: 0;
+    width: 100dvw;
+    height: 100dvh;
+    font-size: 1rem;
+    color: #e5e7eb;
+    background-color: #121826;
+    font-family: "Outfit", sans-serif;
+    background-image: url(../assets/Background_image.svg);
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 2.25em;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 1.25em;
+  }
+  p{
+    color: #D2D5DA;
+  }
+  .author-info {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 16px;
+    color: rgb(55, 65, 81);
+  }
+
+  .author-info a {
+    text-decoration: none;
+  }
+</style>
